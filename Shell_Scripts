@@ -1,0 +1,23 @@
+#Shell to Install Jenkins
+
+sudo yum install java-1.8.0
+sudo yum remove java-1.7.0-openjdk
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+sudo service jenkins start
+
+
+#Shell to Install Terraform CLI 
+
+curl -O https://releases.hashicorp.com/terraform/0.12.10/terraform_0.12.10_linux_amd64.zip
+unzip terraform_0.11.1_linux_amd64.zip -d /usr/bin
+
+
+#Shell to Install Git 
+
+sudo yum update -y
+#Install git in your EC2 instance
+sudo yum install git -y
+#Check git version
+git version
